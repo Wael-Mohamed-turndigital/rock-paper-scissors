@@ -1,10 +1,65 @@
 @import './base.css';
-
+$bgColor: #1b2a4b;
 #app {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+}
+
+body {
+  background-color: $bgColor ;
+}
+
+.container {
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows:  3fr 10fr 1fr ;
+  grid-template-areas: 
+  ". score ."
+  ". game ."
+  ". . rules"
+  ;
+  
+}
+@media (max-width: 767.98px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows:  1fr 1fr 1fr 1fr ;
+    grid-template-areas: 
+    "score"
+    "game"
+    "game"
+    "rules"
+    ;
+  }
+}
+
+.score-container{
+  grid-area: score;
+  // background-color: red;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #586881;
+  padding: 10px;
+  width: 100%;
+}
+
+.game-container {
+  grid-area: game;
+  // width: 100%;
+  margin: auto;
+  padding-top: 40px;
+}
+
+.rules-container {
+  grid-area: rules;
+  cursor: pointer;
 }
 
 a,
@@ -18,18 +73,5 @@ a,
 @media (hover: hover) {
   a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
   }
 }
