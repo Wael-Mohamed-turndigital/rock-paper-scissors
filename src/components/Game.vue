@@ -164,6 +164,7 @@ function resetGame() {
     align-items: center;
     font-size: large;
     color: white;
+    margin: 0px 20px;
 }
 .status {
     font-size: large;
@@ -178,7 +179,7 @@ function resetGame() {
 .resultReset {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     justify-items: center;
     color: white;
 }
