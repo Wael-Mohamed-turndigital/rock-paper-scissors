@@ -1,5 +1,8 @@
 <script setup>
 import { ref } from 'vue';
+import iconPaper from '../assets/image/icon-paper.svg'
+import iconRock from '../assets/image/icon-rock.svg'
+import iconScissors from '../assets/image/icon-scissors.svg'
 const playerSelection = ref(null)
 const houseSelection = ref(null)
 const emit = defineEmits(['gameResult'])
@@ -8,19 +11,22 @@ const options = [
     {
         id: 1,
         name:"paper",
-        link: "src/assets/image/icon-paper.svg",
+        // link: "src/assets/image/icon-paper.svg",
+        link: iconPaper,
         color: "yellow"
     },
     {
         id: 2,
         name:"rock",
-        link: "src/assets/image/icon-rock.svg",
+        // link: "src/assets/image/icon-rock.svg",
+        link: iconRock,
         color: "red"
     },
     {
         id: 3,
         name:"scissors",
-        link: "src/assets/image/icon-scissors.svg",
+        // link: "src/assets/image/icon-scissors.svg",
+        link: iconScissors,
         color: "blue"
     }
 ]
